@@ -7,16 +7,13 @@
         <h1><strong>THIS IS HOW THE WORLD WILL END!!!!</strong></h1>
       </div>
 
-      <div>
-        <p>Published 21 March 2020</p>
-        <h2><strong>YOU WILL PERISH IN FLAMES!!!!!</strong></h2>
-        <p>BECAUSE YOU ARE PUNY HUMANS WHO DO NOT DESERVE TO WALK THIS EARTH!!!!!!</p>
-      </div>
+        {% for post in posts %}
+          <div>
+            <p>published: {{ post.published_date }}</p>
+            <h2><strong>{{ post.title }}</strong></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+          </div>
+        {% endfor %}
 
-      <div>
-        <p>Published 22 March 2020</p>
-        <h3><strong>WHAT!?!?!? YOU'RE STILL HERE!?!?!?!?</strong></h3>
-        <p>YOU CAN'T BE SERIOUS!?!?!? WE WEREN'T JOKING!!!!! YOU WILL BURN!!!!BURN!!!!</p>
-      </div>
     </body>
 </html>
